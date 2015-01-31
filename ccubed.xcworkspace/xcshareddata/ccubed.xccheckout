@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B6790AF1-BF88-4D3B-B482-A76C0F19DFAF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ccubed</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F3C2D3E188D9113973B20B3EE195338B72121B00</key>
+		<string>github.com:shana/ccubed.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ccubed.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F3C2D3E188D9113973B20B3EE195338B72121B00</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:shana/ccubed.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F3C2D3E188D9113973B20B3EE195338B72121B00</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F3C2D3E188D9113973B20B3EE195338B72121B00</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ccubed</string>
+		</dict>
+	</array>
+</dict>
+</plist>

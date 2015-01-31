@@ -1,0 +1,3 @@
+*.pbxproj -crlf -merge
+*.xcworkspacedata -crlf
+*.xccheckout -crlf
