@@ -9,8 +9,8 @@
 #import "AppDelegate.h"
 
 #include "include/cef_application_mac.h"
+#include "CallbackHandler.h"
 
-//#include "CallbackHandler.h"
 /*
 @interface AppDelegate ()
 
@@ -38,9 +38,9 @@
 }
 
 - (void)tryToTerminateApplication:(NSApplication*)app {
-  //CallbackHandler* handler = CallbackHandler::GetInstance();
-  //if (handler && !handler->IsClosing())
-  //  handler->Close(false);
+  CallbackHandler* handler = CallbackHandler::GetInstance();
+  if (handler)
+    handler->Close();
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:

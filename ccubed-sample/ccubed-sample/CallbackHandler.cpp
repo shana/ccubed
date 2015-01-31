@@ -8,12 +8,24 @@
 
 #include "CallbackHandler.h"
 
+namespace {
+
+CallbackHandler* g_instance = NULL;
+    
+}
+
 CallbackHandler::CallbackHandler()
 {
+    g_instance = this;
 }
 
 CallbackHandler::~CallbackHandler()
 {
+    g_instance = NULL;
+}
+
+CallbackHandler* CallbackHandler::GetInstance() {
+    return g_instance;
 }
 
 void
@@ -46,5 +58,10 @@ CallbackHandler::OnLoadError(CefRefPtr<CefBrowser> browser,
                            const CefString& errorText,
                            const CefString& failedUrl)
 
+{
+}
+
+void
+CallbackHandler::Close()
 {
 }
