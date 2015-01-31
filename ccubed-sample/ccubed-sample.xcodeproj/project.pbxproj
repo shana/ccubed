@@ -359,15 +359,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/shana/code/stuff/embedded,
+					"$(SRCROOT)/../../",
 				);
 				INFOPLIST_FILE = "ccubed-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"/Users/shana/code/stuff/embedded/Chromium Embedded Framework.framework\"",
+					"\"$(SRCROOT)/../../Chromium Embedded Framework.framework\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Headers\"";
 			};
 			name = Debug;
 		};
@@ -378,15 +379,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/shana/code/stuff/embedded,
+					"$(SRCROOT)/../../",
 				);
 				INFOPLIST_FILE = "ccubed-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"/Users/shana/code/stuff/embedded/Chromium Embedded Framework.framework\"",
+					"\"$(SRCROOT)/../../Chromium Embedded Framework.framework\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Headers\"";
 			};
 			name = Release;
 		};
