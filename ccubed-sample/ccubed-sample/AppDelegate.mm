@@ -11,25 +11,10 @@
 #include "include/cef_application_mac.h"
 #include "CallbackHandler.h"
 
-/*
-@interface AppDelegate ()
-
-@property (weak) IBOutlet NSWindow *window;
-@end
-*/
 @implementation AppDelegate
-/*
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	// Insert code here to initialize your application
-}
-
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-	// Insert code here to tear down your application
-}
-*/
 
 // Create the application on the UI thread.
-- (void)createApplication:(id)object {
+- (void)createApp:(id)object {
   [NSApplication sharedApplication];
   [NSBundle loadNibNamed:@"MainMenu" owner:NSApp];
 
@@ -48,13 +33,6 @@
   return NSTerminateNow;
 }
 
-@end
-
-
-@interface CCubedSampleApplication : NSApplication<CefAppProtocol> {
-@private
-  BOOL handlingSendEvent_;
-}
 @end
 
 @implementation CCubedSampleApplication

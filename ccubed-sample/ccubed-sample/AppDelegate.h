@@ -8,8 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
+#include "CCubedApp.h"
+
 @interface AppDelegate : NSObject
-
-
+- (void)createApp:(id)object;
 @end
 
+
+@interface CCubedSampleApplication : NSApplication<CefAppProtocol> {
+@private
+    BOOL handlingSendEvent_;
+}
+@end

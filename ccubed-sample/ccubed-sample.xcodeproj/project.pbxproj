@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290F1FB31A7D3C5C002C0BE6 /* CCubedApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 290F1FB11A7D3C5C002C0BE6 /* CCubedApp.cpp */; };
+		290F1FB41A7D3E5D002C0BE6 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */; };
+		290F1FBC1A7D4075002C0BE6 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290F1FBB1A7D4075002C0BE6 /* AppKit.framework */; };
 		745C4E5D1A7D142600812197 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 745C4E5C1A7D142600812197 /* AppDelegate.mm */; };
-		745C4E5F1A7D142600812197 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 745C4E5E1A7D142600812197 /* main.m */; };
+		745C4E5F1A7D142600812197 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 745C4E5E1A7D142600812197 /* main.mm */; };
 		745C4E611A7D142600812197 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745C4E601A7D142600812197 /* Images.xcassets */; };
 		745C4E641A7D142700812197 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745C4E621A7D142700812197 /* MainMenu.xib */; };
 		745C4E701A7D142700812197 /* ccubed_sampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 745C4E6F1A7D142700812197 /* ccubed_sampleTests.m */; };
@@ -27,11 +30,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		290F1FB11A7D3C5C002C0BE6 /* CCubedApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCubedApp.cpp; sourceTree = "<group>"; };
+		290F1FB21A7D3C5C002C0BE6 /* CCubedApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCubedApp.h; sourceTree = "<group>"; };
+		290F1FBB1A7D4075002C0BE6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		745C4E561A7D142600812197 /* ccubed-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ccubed-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		745C4E5A1A7D142600812197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		745C4E5B1A7D142600812197 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		745C4E5C1A7D142600812197 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
-		745C4E5E1A7D142600812197 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		745C4E5E1A7D142600812197 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		745C4E601A7D142600812197 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		745C4E631A7D142700812197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		745C4E691A7D142700812197 /* ccubed-sampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ccubed-sampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290F1FBC1A7D4075002C0BE6 /* AppKit.framework in Frameworks */,
 				74DE23511A7D265000762C19 /* Chromium Embedded Framework.framework in Frameworks */,
+				290F1FB41A7D3E5D002C0BE6 /* libcef_dll_wrapper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +73,7 @@
 		745C4E4D1A7D142600812197 = {
 			isa = PBXGroup;
 			children = (
+				290F1FBB1A7D4075002C0BE6 /* AppKit.framework */,
 				745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */,
 				745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */,
 				745C4E581A7D142600812197 /* ccubed-sample */,
@@ -92,6 +101,8 @@
 				745C4E591A7D142600812197 /* Supporting Files */,
 				745C4E791A7D1D8500812197 /* CallbackHandler.cpp */,
 				745C4E7A1A7D1D8500812197 /* CallbackHandler.h */,
+				290F1FB11A7D3C5C002C0BE6 /* CCubedApp.cpp */,
+				290F1FB21A7D3C5C002C0BE6 /* CCubedApp.h */,
 			);
 			path = "ccubed-sample";
 			sourceTree = "<group>";
@@ -100,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				745C4E5A1A7D142600812197 /* Info.plist */,
-				745C4E5E1A7D142600812197 /* main.m */,
+				745C4E5E1A7D142600812197 /* main.mm */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -239,7 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				745C4E7B1A7D1D8500812197 /* CallbackHandler.cpp in Sources */,
-				745C4E5F1A7D142600812197 /* main.m in Sources */,
+				290F1FB31A7D3C5C002C0BE6 /* CCubedApp.cpp in Sources */,
+				745C4E5F1A7D142600812197 /* main.mm in Sources */,
 				745C4E5D1A7D142600812197 /* AppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,7 +377,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Chromium Embedded Framework.framework\"",
+					"\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Libraries\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Headers\"";
@@ -385,7 +397,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Chromium Embedded Framework.framework\"",
+					"\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Libraries\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Headers\"";
