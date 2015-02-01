@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 
 #include "CCubedApp.h"
+#include "RequestHandler.h"
 
 // Entry point function for the browser process.
 int main(int argc, char* argv[]) {
@@ -28,7 +29,9 @@ int main(int argc, char* argv[]) {
     
     // Initialize CEF for the browser process.
     CefInitialize(main_args, settings, app.get(), NULL);
-    
+	
+	CefRegisterSchemeHandlerFactory("client", "ccubed", new ClientSchemeHandlerFactory());
+	
     // Create the application delegate.
     NSObject* delegate = [[AppDelegate alloc] init];
     [delegate performSelectorOnMainThread:@selector(createApp:) withObject:nil

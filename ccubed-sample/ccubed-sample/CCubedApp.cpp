@@ -40,9 +40,15 @@ void CCubedApp::OnContextInitialized() {
     CefCommandLine::GetGlobalCommandLine();
     url = command_line->GetSwitchValue("url");
     if (url.empty())
-        url = "http://www.google.com";
+        url = "client://ccubed/index";
     
     // Create the first browser window.
     CefBrowserHost::CreateBrowserSync(window_info, handler.get(), url,
                                       browser_settings, NULL);
+}
+
+void
+CCubedApp::OnRegisterCustomSchemes(CefRefPtr<CefSchemeRegistrar> registrar) {
+	// Default schemes that support cookies.
+	registrar->AddCustomScheme("client", true, false, false);
 }

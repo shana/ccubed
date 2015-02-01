@@ -81,7 +81,7 @@ CallbackHandler::Close()
 		return;
 	}
 
-	if (m_Browser != NULL)
+	if (m_Browser == NULL)
 		return;
 
 	m_Browser->GetHost()->CloseBrowser(true);
