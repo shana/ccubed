@@ -14,20 +14,30 @@
 		745C4E5F1A7D142600812197 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 745C4E5E1A7D142600812197 /* main.mm */; };
 		745C4E611A7D142600812197 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745C4E601A7D142600812197 /* Images.xcassets */; };
 		745C4E641A7D142700812197 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745C4E621A7D142700812197 /* MainMenu.xib */; };
-		745C4E701A7D142700812197 /* ccubed_sampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 745C4E6F1A7D142700812197 /* ccubed_sampleTests.m */; };
 		745C4E7B1A7D1D8500812197 /* CallbackHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 745C4E791A7D1D8500812197 /* CallbackHandler.cpp */; };
+		74C3515F1A7E6A3300FDD8AF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74C3515E1A7E6A3300FDD8AF /* Info.plist */; };
 		74DE23511A7D265000762C19 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */; };
+		74F5AB331A7E5FE700BF9D3C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290F1FBB1A7D4075002C0BE6 /* AppKit.framework */; };
+		74F5AB341A7E5FE700BF9D3C /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */; };
+		74F5AB351A7E5FE700BF9D3C /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */; };
+		74F5AB371A7E5FE700BF9D3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745C4E601A7D142600812197 /* Images.xcassets */; };
+		74F5AB381A7E5FE700BF9D3C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745C4E621A7D142700812197 /* MainMenu.xib */; };
+		74F5AB421A7E60FB00BF9D3C /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74F5AB411A7E60FB00BF9D3C /* process_helper_mac.cpp */; };
+		74F5AB451A7E63CB00BF9D3C /* ccubed-sample Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74F5AB3E1A7E5FE700BF9D3C /* ccubed-sample Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		745C4E6A1A7D142700812197 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 745C4E4E1A7D142600812197 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 745C4E551A7D142600812197;
-			remoteInfo = "ccubed-sample";
+/* Begin PBXCopyFilesBuildPhase section */
+		74F5AB441A7E637D00BF9D3C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				74F5AB451A7E63CB00BF9D3C /* ccubed-sample Helper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		290F1FB11A7D3C5C002C0BE6 /* CCubedApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCubedApp.cpp; sourceTree = "<group>"; };
@@ -40,14 +50,13 @@
 		745C4E5E1A7D142600812197 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		745C4E601A7D142600812197 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		745C4E631A7D142700812197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		745C4E691A7D142700812197 /* ccubed-sampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ccubed-sampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		745C4E6E1A7D142700812197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		745C4E6F1A7D142700812197 /* ccubed_sampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ccubed_sampleTests.m; sourceTree = "<group>"; };
 		745C4E791A7D1D8500812197 /* CallbackHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CallbackHandler.cpp; sourceTree = "<group>"; };
 		745C4E7A1A7D1D8500812197 /* CallbackHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallbackHandler.h; sourceTree = "<group>"; };
 		745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Chromium Embedded Framework.framework"; path = "../../Chromium Embedded Framework.framework"; sourceTree = "<group>"; };
 		745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcef_dll_wrapper.a; path = "../../Chromium Embedded Framework.framework/Libraries/libcef_dll_wrapper.a"; sourceTree = "<group>"; };
-		74F5AB051A7D431E00BF9D3C /* icudtl.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = icudtl.dat; sourceTree = "<group>"; };
+		74C3515E1A7E6A3300FDD8AF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74F5AB3E1A7E5FE700BF9D3C /* ccubed-sample Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ccubed-sample Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F5AB411A7E60FB00BF9D3C /* process_helper_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = process_helper_mac.cpp; path = "ccubed-sample_helper/process_helper_mac.cpp"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +70,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		745C4E661A7D142700812197 /* Frameworks */ = {
+		74F5AB321A7E5FE700BF9D3C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F5AB331A7E5FE700BF9D3C /* AppKit.framework in Frameworks */,
+				74F5AB341A7E5FE700BF9D3C /* Chromium Embedded Framework.framework in Frameworks */,
+				74F5AB351A7E5FE700BF9D3C /* libcef_dll_wrapper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +86,11 @@
 		745C4E4D1A7D142600812197 = {
 			isa = PBXGroup;
 			children = (
-				74F5AB051A7D431E00BF9D3C /* icudtl.dat */,
 				290F1FBB1A7D4075002C0BE6 /* AppKit.framework */,
 				745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */,
 				745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */,
 				745C4E581A7D142600812197 /* ccubed-sample */,
-				745C4E6C1A7D142700812197 /* ccubed-sampleTests */,
+				74F5AB0D1A7E5FBE00BF9D3C /* ccubed-sample_helper */,
 				745C4E571A7D142600812197 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				745C4E561A7D142600812197 /* ccubed-sample.app */,
-				745C4E691A7D142700812197 /* ccubed-sampleTests.xctest */,
+				74F5AB3E1A7E5FE700BF9D3C /* ccubed-sample Helper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,21 +129,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		745C4E6C1A7D142700812197 /* ccubed-sampleTests */ = {
+		74F5AB0D1A7E5FBE00BF9D3C /* ccubed-sample_helper */ = {
 			isa = PBXGroup;
 			children = (
-				745C4E6F1A7D142700812197 /* ccubed_sampleTests.m */,
-				745C4E6D1A7D142700812197 /* Supporting Files */,
+				74C3515E1A7E6A3300FDD8AF /* Info.plist */,
+				74F5AB411A7E60FB00BF9D3C /* process_helper_mac.cpp */,
 			);
-			path = "ccubed-sampleTests";
-			sourceTree = "<group>";
-		};
-		745C4E6D1A7D142700812197 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				745C4E6E1A7D142700812197 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = "ccubed-sample_helper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +148,10 @@
 				745C4E521A7D142600812197 /* Sources */,
 				745C4E531A7D142600812197 /* Frameworks */,
 				745C4E541A7D142600812197 /* Resources */,
+				74F5AB441A7E637D00BF9D3C /* CopyFiles */,
 				74DE23521A7D271100762C19 /* ShellScript */,
 				74F5AB071A7D440700BF9D3C /* ShellScript */,
+				74F5AB431A7E612300BF9D3C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -157,23 +162,24 @@
 			productReference = 745C4E561A7D142600812197 /* ccubed-sample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		745C4E681A7D142700812197 /* ccubed-sampleTests */ = {
+		74F5AB2C1A7E5FE700BF9D3C /* ccubed-sample Helper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 745C4E761A7D142700812197 /* Build configuration list for PBXNativeTarget "ccubed-sampleTests" */;
+			buildConfigurationList = 74F5AB3B1A7E5FE700BF9D3C /* Build configuration list for PBXNativeTarget "ccubed-sample Helper" */;
 			buildPhases = (
-				745C4E651A7D142700812197 /* Sources */,
-				745C4E661A7D142700812197 /* Frameworks */,
-				745C4E671A7D142700812197 /* Resources */,
+				74F5AB2D1A7E5FE700BF9D3C /* Sources */,
+				74F5AB321A7E5FE700BF9D3C /* Frameworks */,
+				74F5AB361A7E5FE700BF9D3C /* Resources */,
+				74F5AB391A7E5FE700BF9D3C /* ShellScript */,
+				74F5AB3A1A7E5FE700BF9D3C /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				745C4E6B1A7D142700812197 /* PBXTargetDependency */,
 			);
-			name = "ccubed-sampleTests";
-			productName = "ccubed-sampleTests";
-			productReference = 745C4E691A7D142700812197 /* ccubed-sampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "ccubed-sample Helper";
+			productName = "ccubed-sample";
+			productReference = 74F5AB3E1A7E5FE700BF9D3C /* ccubed-sample Helper.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -186,10 +192,6 @@
 				TargetAttributes = {
 					745C4E551A7D142600812197 = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					745C4E681A7D142700812197 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 745C4E551A7D142600812197;
 					};
 				};
 			};
@@ -207,7 +209,7 @@
 			projectRoot = "";
 			targets = (
 				745C4E551A7D142600812197 /* ccubed-sample */,
-				745C4E681A7D142700812197 /* ccubed-sampleTests */,
+				74F5AB2C1A7E5FE700BF9D3C /* ccubed-sample Helper */,
 			);
 		};
 /* End PBXProject section */
@@ -222,10 +224,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		745C4E671A7D142700812197 /* Resources */ = {
+		74F5AB361A7E5FE700BF9D3C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F5AB371A7E5FE700BF9D3C /* Images.xcassets in Resources */,
+				74F5AB381A7E5FE700BF9D3C /* MainMenu.xib in Resources */,
+				74C3515F1A7E6A3300FDD8AF /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +264,47 @@
 			shellPath = /bin/sh;
 			shellScript = "exec cp -Rf \"${SRCROOT}/../../Chromium Embedded Framework.framework\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Contents/Frameworks/\"\nexit 1\n";
 		};
+		74F5AB391A7E5FE700BF9D3C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "exec install_name_tool -change \"@executable_path/Chromium Embedded Framework\" \"@executable_path/../Frameworks/Chromium Embedded Framework.framework/Chromium Embedded Framework\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nexit 1\n";
+		};
+		74F5AB3A1A7E5FE700BF9D3C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "exec cp -Rf \"${SRCROOT}/../../Chromium Embedded Framework.framework\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Contents/Frameworks/\"\nexit 1\n";
+		};
+		74F5AB431A7E612300BF9D3C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "exec \"${SRCROOT}/../chromium_tools/make_more_helpers.sh\" Frameworks ccubed-sample\nexit 1\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -273,23 +319,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		745C4E651A7D142700812197 /* Sources */ = {
+		74F5AB2D1A7E5FE700BF9D3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				745C4E701A7D142700812197 /* ccubed_sampleTests.m in Sources */,
+				74F5AB421A7E60FB00BF9D3C /* process_helper_mac.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		745C4E6B1A7D142700812197 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 745C4E551A7D142600812197 /* ccubed-sample */;
-			targetProxy = 745C4E6A1A7D142700812197 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		745C4E621A7D142700812197 /* MainMenu.xib */ = {
@@ -421,39 +459,43 @@
 			};
 			name = Release;
 		};
-		745C4E771A7D142700812197 /* Debug */ = {
+		74F5AB3C1A7E5FE700BF9D3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(SRCROOT)/../../",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+				INFOPLIST_FILE = "ccubed-sample_helper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Libraries\"",
 				);
-				INFOPLIST_FILE = "ccubed-sampleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ccubed-sample.app/Contents/MacOS/ccubed-sample";
+				PRODUCT_NAME = "ccubed-sample Helper";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Headers\"";
 			};
 			name = Debug;
 		};
-		745C4E781A7D142700812197 /* Release */ = {
+		74F5AB3D1A7E5FE700BF9D3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(SRCROOT)/../../",
 				);
-				INFOPLIST_FILE = "ccubed-sampleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ccubed-sample.app/Contents/MacOS/ccubed-sample";
+				INFOPLIST_FILE = "ccubed-sample_helper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Libraries\"",
+				);
+				PRODUCT_NAME = "ccubed-sample Helper";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Headers\"";
 			};
 			name = Release;
 		};
@@ -478,11 +520,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		745C4E761A7D142700812197 /* Build configuration list for PBXNativeTarget "ccubed-sampleTests" */ = {
+		74F5AB3B1A7E5FE700BF9D3C /* Build configuration list for PBXNativeTarget "ccubed-sample Helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				745C4E771A7D142700812197 /* Debug */,
-				745C4E781A7D142700812197 /* Release */,
+				74F5AB3C1A7E5FE700BF9D3C /* Debug */,
+				74F5AB3D1A7E5FE700BF9D3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
