@@ -9,6 +9,8 @@
 #include "RequestHandler.h"
 
 #include <include/wrapper/cef_helpers.h>
+#include "UrlParser.h"
+#include "File.h"
 
 CefRefPtr<CefResourceHandler>
 ClientSchemeHandlerFactory::Create(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame,
@@ -27,12 +29,22 @@ ClientSchemeHandler::ProcessRequest(CefRefPtr<CefRequest> request, CefRefPtr<Cef
 
 	bool handled = false;
 
+	std::string url = request->GetURL();
+
+	Url* u = UrlParser::ParseUrl(url);
+	data_ = File::Read(u->GetFile().c_str());
+/*
 	data_ = "<html><head><title>Client Scheme Handler</title></head>"
 			"<body bgcolor=\"white\">"
 			"This contents of this page page are served by the "
 			"ClientSchemeHandler class handling the client:// protocol."
-			"</body>"
-			"</html>";
+			;
+	data_.append(url);
+	data_.append(
+			"cute person you!</body>"
+			"</html>"
+			);
+*/
 
 	handled = true;
 

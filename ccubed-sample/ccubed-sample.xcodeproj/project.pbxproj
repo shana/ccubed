@@ -16,6 +16,9 @@
 		745C4E641A7D142700812197 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745C4E621A7D142700812197 /* MainMenu.xib */; };
 		745C4E7B1A7D1D8500812197 /* CallbackHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 745C4E791A7D1D8500812197 /* CallbackHandler.cpp */; };
 		7496E6D81A7E7070007A9923 /* RequestHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7496E6D61A7E7070007A9923 /* RequestHandler.cpp */; };
+		7496E6DB1A7E7AB7007A9923 /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7496E6D91A7E7AB7007A9923 /* File.cpp */; };
+		7496E6DE1A7E7ED7007A9923 /* UrlParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7496E6DC1A7E7ED7007A9923 /* UrlParser.cpp */; };
+		7496E7091A7EB135007A9923 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 7496E7081A7EB135007A9923 /* index.html */; };
 		74C3515F1A7E6A3300FDD8AF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74C3515E1A7E6A3300FDD8AF /* Info.plist */; };
 		74DE23511A7D265000762C19 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */; };
 		74F5AB331A7E5FE700BF9D3C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290F1FBB1A7D4075002C0BE6 /* AppKit.framework */; };
@@ -57,6 +60,11 @@
 		745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcef_dll_wrapper.a; path = "../../Chromium Embedded Framework.framework/Libraries/libcef_dll_wrapper.a"; sourceTree = "<group>"; };
 		7496E6D61A7E7070007A9923 /* RequestHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RequestHandler.cpp; sourceTree = "<group>"; };
 		7496E6D71A7E7070007A9923 /* RequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestHandler.h; sourceTree = "<group>"; };
+		7496E6D91A7E7AB7007A9923 /* File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = File.cpp; sourceTree = "<group>"; };
+		7496E6DA1A7E7AB7007A9923 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
+		7496E6DC1A7E7ED7007A9923 /* UrlParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UrlParser.cpp; sourceTree = "<group>"; };
+		7496E6DD1A7E7ED7007A9923 /* UrlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlParser.h; sourceTree = "<group>"; };
+		7496E7081A7EB135007A9923 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		74C3515E1A7E6A3300FDD8AF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74F5AB3E1A7E5FE700BF9D3C /* ccubed-sample Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ccubed-sample Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F5AB411A7E60FB00BF9D3C /* process_helper_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = process_helper_mac.cpp; path = "ccubed-sample_helper/process_helper_mac.cpp"; sourceTree = SOURCE_ROOT; };
@@ -89,6 +97,7 @@
 		745C4E4D1A7D142600812197 = {
 			isa = PBXGroup;
 			children = (
+				7496E7061A7EB135007A9923 /* tests */,
 				290F1FBB1A7D4075002C0BE6 /* AppKit.framework */,
 				745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */,
 				745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */,
@@ -110,6 +119,8 @@
 		745C4E581A7D142600812197 /* ccubed-sample */ = {
 			isa = PBXGroup;
 			children = (
+				7496E6D91A7E7AB7007A9923 /* File.cpp */,
+				7496E6DA1A7E7AB7007A9923 /* File.h */,
 				745C4E5B1A7D142600812197 /* AppDelegate.h */,
 				745C4E5C1A7D142600812197 /* AppDelegate.mm */,
 				745C4E601A7D142600812197 /* Images.xcassets */,
@@ -121,6 +132,8 @@
 				290F1FB21A7D3C5C002C0BE6 /* CCubedApp.h */,
 				7496E6D61A7E7070007A9923 /* RequestHandler.cpp */,
 				7496E6D71A7E7070007A9923 /* RequestHandler.h */,
+				7496E6DC1A7E7ED7007A9923 /* UrlParser.cpp */,
+				7496E6DD1A7E7ED7007A9923 /* UrlParser.h */,
 			);
 			path = "ccubed-sample";
 			sourceTree = "<group>";
@@ -132,6 +145,23 @@
 				745C4E5E1A7D142600812197 /* main.mm */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7496E7061A7EB135007A9923 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				7496E7071A7EB135007A9923 /* SampleData */,
+			);
+			name = tests;
+			path = ../tests;
+			sourceTree = "<group>";
+		};
+		7496E7071A7EB135007A9923 /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				7496E7081A7EB135007A9923 /* index.html */,
+			);
+			path = SampleData;
 			sourceTree = "<group>";
 		};
 		74F5AB0D1A7E5FBE00BF9D3C /* ccubed-sample_helper */ = {
@@ -224,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7496E7091A7EB135007A9923 /* index.html in Resources */,
 				745C4E611A7D142600812197 /* Images.xcassets in Resources */,
 				745C4E641A7D142700812197 /* MainMenu.xib in Resources */,
 			);
@@ -317,9 +348,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7496E6DE1A7E7ED7007A9923 /* UrlParser.cpp in Sources */,
 				745C4E7B1A7D1D8500812197 /* CallbackHandler.cpp in Sources */,
 				7496E6D81A7E7070007A9923 /* RequestHandler.cpp in Sources */,
 				290F1FB31A7D3C5C002C0BE6 /* CCubedApp.cpp in Sources */,
+				7496E6DB1A7E7AB7007A9923 /* File.cpp in Sources */,
 				745C4E5F1A7D142600812197 /* main.mm in Sources */,
 				745C4E5D1A7D142600812197 /* AppDelegate.mm in Sources */,
 			);
@@ -351,7 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -367,7 +400,7 @@
 				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -393,7 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -411,7 +444,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

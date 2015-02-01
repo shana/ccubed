@@ -9,6 +9,7 @@
 #include "CCubedApp.h"
 
 #include "CallbackHandler.h"
+#include "File.h"
 
 #include <include/cef_browser.h>
 #include <include/cef_command_line.h>
@@ -31,7 +32,7 @@ void CCubedApp::OnContextInitialized() {
     
     // Specify CEF browser settings here.
     CefBrowserSettings browser_settings;
-    
+	
     std::string url;
     
     // Check if a "--url=" value was provided via the command-line. If so, use
@@ -40,7 +41,7 @@ void CCubedApp::OnContextInitialized() {
     CefCommandLine::GetGlobalCommandLine();
     url = command_line->GetSwitchValue("url");
     if (url.empty())
-        url = "client://ccubed/index";
+        url = "client://ccubed/index.html";
     
     // Create the first browser window.
     CefBrowserHost::CreateBrowserSync(window_info, handler.get(), url,

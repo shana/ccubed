@@ -11,9 +11,20 @@
 
 #include "CCubedApp.h"
 #include "RequestHandler.h"
+#include "File.h"
 
 // Entry point function for the browser process.
 int main(int argc, char* argv[]) {
+
+	NSString* dirpath = [[NSFileManager defaultManager] currentDirectoryPath];
+	//dirpath = [dirpath stringByDeletingLastPathComponent];
+	
+	dirpath = [dirpath stringByAppendingPathComponent:@"ccubed-sample.app"];
+	dirpath = [dirpath stringByAppendingPathComponent:@"Contents"];
+	dirpath = [dirpath stringByAppendingPathComponent:@"Resources"];
+
+	File::SetExecDir([dirpath UTF8String]);
+
     // Provide CEF with command-line arguments.
     CefMainArgs main_args(argc, argv);
     
