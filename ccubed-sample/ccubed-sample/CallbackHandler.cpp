@@ -7,6 +7,8 @@
 //
 
 #include "CallbackHandler.h"
+#include "include/cef_app.h"
+#include "include/cef_runnable.h"
 
 namespace {
 
@@ -37,17 +39,16 @@ CallbackHandler::OnTitleChange(CefRefPtr<CefBrowser> browser,
 void
 CallbackHandler::OnAfterCreated(CefRefPtr<CefBrowser> browser)
 {
-}
-
-bool
-CallbackHandler::DoClose(CefRefPtr<CefBrowser> browser)
-{
-	return true;
+	m_Browser = browser;
 }
 
 void
 CallbackHandler::OnBeforeClose(CefRefPtr<CefBrowser> browser)
 {
+    m_Browser = NULL;
+
+    // Quit the application message loop.
+    CefQuitMessageLoop();
 }
 
 // CefLoadHandler methods:
@@ -57,11 +58,31 @@ CallbackHandler::OnLoadError(CefRefPtr<CefBrowser> browser,
                            ErrorCode errorCode,
                            const CefString& errorText,
                            const CefString& failedUrl)
-
 {
+	// Don't display an error for downloaded files.
+	if (errorCode == ERR_ABORTED)
+		return;
+
+	// Display a load error message.
+	std::stringstream ss;
+	ss << "<html><body bgcolor=\"white\">"
+		  "<h2>Failed to load URL " << std::string(failedUrl) <<
+		  " with error " << std::string(errorText) << " (" << errorCode <<
+		  ").</h2></body></html>";
+	frame->LoadString(ss.str(), failedUrl);
 }
 
 void
 CallbackHandler::Close()
 {
+	if (!CefCurrentlyOn(TID_UI)) {
+		// Execute on the UI thread.
+		CefPostTask(TID_UI, NewCefRunnableMethod(this, &CallbackHandler::Close));
+		return;
+	}
+
+	if (m_Browser != NULL)
+		return;
+
+	m_Browser->GetHost()->CloseBrowser(true);
 }

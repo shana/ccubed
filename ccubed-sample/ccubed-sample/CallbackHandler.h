@@ -39,7 +39,6 @@ public:
 
     // CefLifeSpanHandler methods:
     virtual void OnAfterCreated(CefRefPtr<CefBrowser> browser) OVERRIDE;
-    virtual bool DoClose(CefRefPtr<CefBrowser> browser) OVERRIDE;
     virtual void OnBeforeClose(CefRefPtr<CefBrowser> browser) OVERRIDE;
 
     // CefLoadHandler methods:
@@ -50,6 +49,9 @@ public:
                              const CefString& failedUrl) OVERRIDE;
 
     void Close();
+
+private:
+    CefRefPtr<CefBrowser> m_Browser;
 
     // Include the default reference counting implementation.
     IMPLEMENT_REFCOUNTING(CallbackHandler);
