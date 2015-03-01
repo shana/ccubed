@@ -22,6 +22,7 @@
 		74C3515F1A7E6A3300FDD8AF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74C3515E1A7E6A3300FDD8AF /* Info.plist */; };
 		74DE23511A7D265000762C19 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */; };
 		74E171381AA3916300772931 /* CCubedCefApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E171361AA3916300772931 /* CCubedCefApp.cpp */; };
+		74E1713E1AA39AE000772931 /* libmono-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E1713D1AA39AE000772931 /* libmono-2.0.a */; };
 		74F5AB331A7E5FE700BF9D3C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290F1FBB1A7D4075002C0BE6 /* AppKit.framework */; };
 		74F5AB341A7E5FE700BF9D3C /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */; };
 		74F5AB351A7E5FE700BF9D3C /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */; };
@@ -69,6 +70,7 @@
 		74C3515E1A7E6A3300FDD8AF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74E171361AA3916300772931 /* CCubedCefApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCubedCefApp.cpp; sourceTree = "<group>"; };
 		74E171371AA3916300772931 /* CCubedCefApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCubedCefApp.h; sourceTree = "<group>"; };
+		74E1713D1AA39AE000772931 /* libmono-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libmono-2.0.a"; path = "../../../../install/mono/master/lib/libmono-2.0.a"; sourceTree = "<group>"; };
 		74F5AB3E1A7E5FE700BF9D3C /* ccubed-sample Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ccubed-sample Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F5AB411A7E60FB00BF9D3C /* process_helper_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = process_helper_mac.cpp; path = "ccubed-sample_helper/process_helper_mac.cpp"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 				290F1FBC1A7D4075002C0BE6 /* AppKit.framework in Frameworks */,
 				74DE23511A7D265000762C19 /* Chromium Embedded Framework.framework in Frameworks */,
 				290F1FB41A7D3E5D002C0BE6 /* libcef_dll_wrapper.a in Frameworks */,
+				74E1713E1AA39AE000772931 /* libmono-2.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +103,7 @@
 		745C4E4D1A7D142600812197 = {
 			isa = PBXGroup;
 			children = (
+				74E1713D1AA39AE000772931 /* libmono-2.0.a */,
 				7496E7061A7EB135007A9923 /* tests */,
 				290F1FBB1A7D4075002C0BE6 /* AppKit.framework */,
 				745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */,
@@ -473,10 +477,16 @@
 					"$(inherited)",
 					"$(SRCROOT)/../../",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../../mono/include/mono-2.0\"",
+				);
 				INFOPLIST_FILE = "ccubed-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					/Users/shana/code/install/mono/master/lib,
 					"\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Libraries\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -493,10 +503,16 @@
 					"$(inherited)",
 					"$(SRCROOT)/../../",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../../mono/include/mono-2.0\"",
+				);
 				INFOPLIST_FILE = "ccubed-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					/Users/shana/code/install/mono/master/lib,
 					"\"$(SRCROOT)/../../Chromium Embedded Framework.framework/Libraries\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
