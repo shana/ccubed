@@ -30,7 +30,9 @@ int main(int argc, char* argv[]) {
     
     // SimpleApp implements application-level callbacks. It will create the first
     // browser instance in OnContextInitialized() after CEF has initialized.
-    CefRefPtr<CCubedApp> app(new CCubedApp);
+    
+    CCubedApp* app = new CCubedApp();
+    app->Initialize();
     
     // Initialize the SimpleApplication instance.
     [CCubedSampleApplication sharedApplication];
@@ -39,7 +41,7 @@ int main(int argc, char* argv[]) {
     CefSettings settings;
     
     // Initialize CEF for the browser process.
-    CefInitialize(main_args, settings, app.get(), NULL);
+    CefInitialize(main_args, settings, app->GetCef().get(), NULL);
 	
 	CefRegisterSchemeHandlerFactory("client", "ccubed", new ClientSchemeHandlerFactory());
 	

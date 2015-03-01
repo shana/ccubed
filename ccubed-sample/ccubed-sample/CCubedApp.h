@@ -12,23 +12,18 @@
 #include <include/cef_app.h>
 #include <include/cef_application_mac.h>
 
-class CCubedApp : public CefApp,
-                  public CefBrowserProcessHandler {
+#include "CCubedCefApp.h"
+
+class CCubedApp {
 public:
-    CCubedApp();
+    CCubedApp() : app(new CCubedCefApp()) {}
     
-    // CefApp methods:
-    virtual CefRefPtr<CefBrowserProcessHandler> GetBrowserProcessHandler()
-    OVERRIDE { return this; }
-
-    // CefBrowserProcessHandler methods:
-    virtual void OnContextInitialized() OVERRIDE;
-
-	virtual void OnRegisterCustomSchemes(CefRefPtr<CefSchemeRegistrar> registrar) OVERRIDE;
-
+    void Initialize();
+    
+    CefRefPtr<CCubedCefApp> GetCef() { return app; }
 private:
-    // Include the default reference counting implementation.
-    IMPLEMENT_REFCOUNTING(CCubedApp);
+    CefRefPtr<CCubedCefApp> app;
 };
+
 
 #endif /* defined(__ccubed_sample__CCubedApp__) */

@@ -21,6 +21,7 @@
 		7496E7091A7EB135007A9923 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 7496E7081A7EB135007A9923 /* index.html */; };
 		74C3515F1A7E6A3300FDD8AF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74C3515E1A7E6A3300FDD8AF /* Info.plist */; };
 		74DE23511A7D265000762C19 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */; };
+		74E171381AA3916300772931 /* CCubedCefApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E171361AA3916300772931 /* CCubedCefApp.cpp */; };
 		74F5AB331A7E5FE700BF9D3C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290F1FBB1A7D4075002C0BE6 /* AppKit.framework */; };
 		74F5AB341A7E5FE700BF9D3C /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */; };
 		74F5AB351A7E5FE700BF9D3C /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */; };
@@ -66,6 +67,8 @@
 		7496E6DD1A7E7ED7007A9923 /* UrlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlParser.h; sourceTree = "<group>"; };
 		7496E7081A7EB135007A9923 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		74C3515E1A7E6A3300FDD8AF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E171361AA3916300772931 /* CCubedCefApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCubedCefApp.cpp; sourceTree = "<group>"; };
+		74E171371AA3916300772931 /* CCubedCefApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCubedCefApp.h; sourceTree = "<group>"; };
 		74F5AB3E1A7E5FE700BF9D3C /* ccubed-sample Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ccubed-sample Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F5AB411A7E60FB00BF9D3C /* process_helper_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = process_helper_mac.cpp; path = "ccubed-sample_helper/process_helper_mac.cpp"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -134,6 +137,8 @@
 				7496E6D71A7E7070007A9923 /* RequestHandler.h */,
 				7496E6DC1A7E7ED7007A9923 /* UrlParser.cpp */,
 				7496E6DD1A7E7ED7007A9923 /* UrlParser.h */,
+				74E171361AA3916300772931 /* CCubedCefApp.cpp */,
+				74E171371AA3916300772931 /* CCubedCefApp.h */,
 			);
 			path = "ccubed-sample";
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				290F1FB31A7D3C5C002C0BE6 /* CCubedApp.cpp in Sources */,
 				7496E6DB1A7E7AB7007A9923 /* File.cpp in Sources */,
 				745C4E5F1A7D142600812197 /* main.mm in Sources */,
+				74E171381AA3916300772931 /* CCubedCefApp.cpp in Sources */,
 				745C4E5D1A7D142600812197 /* AppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
