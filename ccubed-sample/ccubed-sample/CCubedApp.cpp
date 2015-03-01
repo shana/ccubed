@@ -8,11 +8,40 @@
 
 #include "CCubedApp.h"
 
-#include "File.h"
+#include "RequestHandler.h"
 
 void
-CCubedApp::Initialize()
+CCubedApp::Initialize(int argc, char* argv[])
 {
+    // Provide CEF with command-line arguments.
+    CefMainArgs main_args(argc, argv);
     
+    // SimpleApp implements application-level callbacks. It will create the first
+    // browser instance in OnContextInitialized() after CEF has initialized.
+
+    // Specify CEF global settings here.
+    CefSettings settings;
+    
+    // Initialize CEF for the browser process.
+    CefInitialize(main_args, settings, GetCef().get(), NULL);
+    
+    CefRegisterSchemeHandlerFactory("client", "ccubed", new ClientSchemeHandlerFactory());
+
 }
 
+bool
+CCubedApp::Run()
+{
+    // Run the CEF message loop. This will block until CefQuitMessageLoop() is
+    // called.
+    CefRunMessageLoop();
+
+    return true;
+}
+
+void
+CCubedApp::Shutdown()
+{
+    // Shut down CEF.
+    CefShutdown();
+}

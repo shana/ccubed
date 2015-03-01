@@ -18,7 +18,9 @@ class CCubedApp {
 public:
     CCubedApp() : app(new CCubedCefApp()) {}
     
-    void Initialize();
+    void Initialize(int argc, char* argv[]);
+    bool Run();
+    void Shutdown();
     
     CefRefPtr<CCubedCefApp> GetCef() { return app; }
 private:
