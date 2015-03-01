@@ -23,6 +23,8 @@
 		74DE23511A7D265000762C19 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */; };
 		74E171381AA3916300772931 /* CCubedCefApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E171361AA3916300772931 /* CCubedCefApp.cpp */; };
 		74E1713E1AA39AE000772931 /* libmono-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E1713D1AA39AE000772931 /* libmono-2.0.a */; };
+		74E171411AA3A04600772931 /* mono in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74E171401AA3A04600772931 /* mono */; };
+		74E171491AA3A6F900772931 /* test.cs in Resources */ = {isa = PBXBuildFile; fileRef = 74E171481AA3A6F900772931 /* test.cs */; };
 		74F5AB331A7E5FE700BF9D3C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290F1FBB1A7D4075002C0BE6 /* AppKit.framework */; };
 		74F5AB341A7E5FE700BF9D3C /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */; };
 		74F5AB351A7E5FE700BF9D3C /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */; };
@@ -33,6 +35,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		74E1713F1AA3A01E00772931 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				74E171411AA3A04600772931 /* mono in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74F5AB441A7E637D00BF9D3C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,6 +83,8 @@
 		74E171361AA3916300772931 /* CCubedCefApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCubedCefApp.cpp; sourceTree = "<group>"; };
 		74E171371AA3916300772931 /* CCubedCefApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCubedCefApp.h; sourceTree = "<group>"; };
 		74E1713D1AA39AE000772931 /* libmono-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libmono-2.0.a"; path = "../../../../install/mono/master/lib/libmono-2.0.a"; sourceTree = "<group>"; };
+		74E171401AA3A04600772931 /* mono */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mono; path = ../../mono; sourceTree = "<group>"; };
+		74E171481AA3A6F900772931 /* test.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.cs; sourceTree = "<group>"; };
 		74F5AB3E1A7E5FE700BF9D3C /* ccubed-sample Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ccubed-sample Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F5AB411A7E60FB00BF9D3C /* process_helper_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = process_helper_mac.cpp; path = "ccubed-sample_helper/process_helper_mac.cpp"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -103,6 +117,7 @@
 		745C4E4D1A7D142600812197 = {
 			isa = PBXGroup;
 			children = (
+				74E171401AA3A04600772931 /* mono */,
 				74E1713D1AA39AE000772931 /* libmono-2.0.a */,
 				7496E7061A7EB135007A9923 /* tests */,
 				290F1FBB1A7D4075002C0BE6 /* AppKit.framework */,
@@ -159,6 +174,7 @@
 		7496E7061A7EB135007A9923 /* tests */ = {
 			isa = PBXGroup;
 			children = (
+				74E171481AA3A6F900772931 /* test.cs */,
 				7496E7071A7EB135007A9923 /* SampleData */,
 			);
 			name = tests;
@@ -196,6 +212,8 @@
 				74DE23521A7D271100762C19 /* ShellScript */,
 				74F5AB071A7D440700BF9D3C /* ShellScript */,
 				74F5AB431A7E612300BF9D3C /* ShellScript */,
+				74E1713F1AA3A01E00772931 /* CopyFiles */,
+				74E171471AA3A6A200772931 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -266,6 +284,7 @@
 				7496E7091A7EB135007A9923 /* index.html in Resources */,
 				745C4E611A7D142600812197 /* Images.xcassets in Resources */,
 				745C4E641A7D142700812197 /* MainMenu.xib in Resources */,
+				74E171491AA3A6F900772931 /* test.cs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +313,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "exec install_name_tool -change \"@executable_path/Chromium Embedded Framework\" \"@executable_path/../Frameworks/Chromium Embedded Framework.framework/Chromium Embedded Framework\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nexit 1\n";
+		};
+		74E171471AA3A6A200772931 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../tests/test.cs",
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Contents/Resources/Managed/test.dll",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "dmcs ${SCRIPT_INPUT_FILE_0} -target:library -out:${SCRIPT_OUTPUT_FILE_0}";
 		};
 		74F5AB071A7D440700BF9D3C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -12,7 +12,10 @@
 #include <include/cef_app.h>
 #include <include/cef_application_mac.h>
 
+#include <mono/jit/jit.h>
+
 #include "CCubedCefApp.h"
+
 
 class CCubedApp {
 public:
@@ -25,6 +28,7 @@ public:
     CefRefPtr<CCubedCefApp> GetCef() { return app; }
 private:
     CefRefPtr<CCubedCefApp> app;
+    MonoDomain* domain;
 };
 
 

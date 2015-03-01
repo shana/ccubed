@@ -16,6 +16,8 @@ public:
 	static std::string Read(const char* const filename);
 
 	static void SetExecDir(const char* path);
+    
+    static std::string GetExecDir() { return ExecDir; }
 private:
 	static std::string ExecDir;
 	static char PathSeparator;

@@ -7,7 +7,11 @@
 //
 
 #include "CCubedApp.h"
+#include <mono/metadata/mono-config.h>
+#include <mono/metadata/threads.h>
+#include <mono/metadata/assembly.h>
 
+#include "File.h"
 #include "RequestHandler.h"
 
 void
@@ -27,11 +31,34 @@ CCubedApp::Initialize(int argc, char* argv[])
     
     CefRegisterSchemeHandlerFactory("client", "ccubed", new ClientSchemeHandlerFactory());
 
+    std::vector<std::string> monoPaths;
+    std::string libmonoDir = File::GetExecDir() + "/mono/lib";
+    std::string dllDir = File::GetExecDir() + "/Managed";
+    std::string etcmonoDir = File::GetExecDir() + "/mono/etc";
+    monoPaths.push_back(libmonoDir.c_str());
+    monoPaths.push_back(dllDir.c_str());
+    mono_set_dirs(libmonoDir.c_str(), etcmonoDir.c_str());
+    mono_set_assemblies_path(dllDir.c_str());
+    
+    mono_config_parse (NULL);
+    domain = mono_jit_init_version ("CCubed Root Domain", "v4.0.30319");
+    
+    // soft debugger needs this
+    mono_thread_set_main (mono_thread_current ());
+    
 }
 
 bool
 CCubedApp::Run()
 {
+    std::string dll = File::GetExecDir() + "/Managed/test.dll";
+    MonoAssembly* assembly = mono_domain_assembly_open(mono_domain_get(), dll.c_str());
+    MonoImage* image = mono_assembly_get_image (assembly);
+    MonoClass* klass = mono_class_from_name (image, "Embed", "Test");
+    MonoObject* obj = mono_object_new (domain, klass);
+    mono_runtime_object_init (obj);
+    
+    
     // Run the CEF message loop. This will block until CefQuitMessageLoop() is
     // called.
     CefRunMessageLoop();
@@ -42,6 +69,8 @@ CCubedApp::Run()
 void
 CCubedApp::Shutdown()
 {
+    mono_jit_cleanup (domain);
+    
     // Shut down CEF.
     CefShutdown();
 }
