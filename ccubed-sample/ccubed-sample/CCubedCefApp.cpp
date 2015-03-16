@@ -13,6 +13,7 @@
 
 #include <include/cef_browser.h>
 #include <include/cef_command_line.h>
+#include <include/cef_v8.h>
 
 
 void CCubedCefApp::OnContextInitialized() {
@@ -42,7 +43,7 @@ void CCubedCefApp::OnContextInitialized() {
         url = "client://ccubed/index.html";
     
     // Create the first browser window.
-    CefBrowserHost::CreateBrowserSync(window_info, handler.get(), url,
+    CefBrowserHost::CreateBrowser(window_info, handler.get(), url,
                                       browser_settings, NULL);
 }
 
@@ -50,4 +51,30 @@ void
 CCubedCefApp::OnRegisterCustomSchemes(CefRefPtr<CefSchemeRegistrar> registrar) {
     // Default schemes that support cookies.
     registrar->AddCustomScheme("client", true, false, false);
+}
+
+void
+CCubedCefApp::OnRenderProcessThreadCreated(CefRefPtr<CefListValue> extra_info) {
+    int a = 0;
+    a++;
+}
+
+void
+CCubedCefApp::OnBeforeChildProcessLaunch(CefRefPtr<CefCommandLine> command_line) {
+    int a = 0;
+    a++;
+}
+
+void
+CCubedCefApp::OnRenderThreadCreated(CefRefPtr<CefListValue> extra_info) {
+    
+    if (!bridge)
+        bridge = new JSBridge();
+    
+    std::string js = File::Read("test.js");
+    
+    
+    CefRegisterExtension("extensionTest",
+                         js,
+                         bridge);
 }

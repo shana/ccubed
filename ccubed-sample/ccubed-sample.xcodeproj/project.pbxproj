@@ -25,6 +25,8 @@
 		74E1713E1AA39AE000772931 /* libmono-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E1713D1AA39AE000772931 /* libmono-2.0.a */; };
 		74E171411AA3A04600772931 /* mono in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74E171401AA3A04600772931 /* mono */; };
 		74E171491AA3A6F900772931 /* test.cs in Resources */ = {isa = PBXBuildFile; fileRef = 74E171481AA3A6F900772931 /* test.cs */; };
+		74E1714C1AA3B10000772931 /* JSBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E1714A1AA3B10000772931 /* JSBridge.cpp */; };
+		74E1714F1AA3B2AF00772931 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 74E1714E1AA3B2AF00772931 /* test.js */; };
 		74F5AB331A7E5FE700BF9D3C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290F1FBB1A7D4075002C0BE6 /* AppKit.framework */; };
 		74F5AB341A7E5FE700BF9D3C /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7C1A7D1FCD00812197 /* Chromium Embedded Framework.framework */; };
 		74F5AB351A7E5FE700BF9D3C /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C4E7E1A7D245A00812197 /* libcef_dll_wrapper.a */; };
@@ -85,6 +87,9 @@
 		74E1713D1AA39AE000772931 /* libmono-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libmono-2.0.a"; path = "../../../../install/mono/master/lib/libmono-2.0.a"; sourceTree = "<group>"; };
 		74E171401AA3A04600772931 /* mono */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mono; path = ../../mono; sourceTree = "<group>"; };
 		74E171481AA3A6F900772931 /* test.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.cs; sourceTree = "<group>"; };
+		74E1714A1AA3B10000772931 /* JSBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JSBridge.cpp; sourceTree = "<group>"; };
+		74E1714B1AA3B10000772931 /* JSBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBridge.h; sourceTree = "<group>"; };
+		74E1714E1AA3B2AF00772931 /* test.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 		74F5AB3E1A7E5FE700BF9D3C /* ccubed-sample Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ccubed-sample Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F5AB411A7E60FB00BF9D3C /* process_helper_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = process_helper_mac.cpp; path = "ccubed-sample_helper/process_helper_mac.cpp"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -158,6 +163,8 @@
 				7496E6DD1A7E7ED7007A9923 /* UrlParser.h */,
 				74E171361AA3916300772931 /* CCubedCefApp.cpp */,
 				74E171371AA3916300772931 /* CCubedCefApp.h */,
+				74E1714A1AA3B10000772931 /* JSBridge.cpp */,
+				74E1714B1AA3B10000772931 /* JSBridge.h */,
 			);
 			path = "ccubed-sample";
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 		7496E7061A7EB135007A9923 /* tests */ = {
 			isa = PBXGroup;
 			children = (
+				74E1714E1AA3B2AF00772931 /* test.js */,
 				74E171481AA3A6F900772931 /* test.cs */,
 				7496E7071A7EB135007A9923 /* SampleData */,
 			);
@@ -281,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E1714F1AA3B2AF00772931 /* test.js in Resources */,
 				7496E7091A7EB135007A9923 /* index.html in Resources */,
 				745C4E611A7D142600812197 /* Images.xcassets in Resources */,
 				745C4E641A7D142700812197 /* MainMenu.xib in Resources */,
@@ -395,6 +404,7 @@
 				745C4E7B1A7D1D8500812197 /* CallbackHandler.cpp in Sources */,
 				7496E6D81A7E7070007A9923 /* RequestHandler.cpp in Sources */,
 				290F1FB31A7D3C5C002C0BE6 /* CCubedApp.cpp in Sources */,
+				74E1714C1AA3B10000772931 /* JSBridge.cpp in Sources */,
 				7496E6DB1A7E7AB7007A9923 /* File.cpp in Sources */,
 				745C4E5F1A7D142600812197 /* main.mm in Sources */,
 				74E171381AA3916300772931 /* CCubedCefApp.cpp in Sources */,

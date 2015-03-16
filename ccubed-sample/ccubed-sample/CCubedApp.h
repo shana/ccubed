@@ -19,8 +19,6 @@
 
 class CCubedApp {
 public:
-    CCubedApp() : app(new CCubedCefApp()) {}
-    
     void Initialize(int argc, char* argv[]);
     bool Run();
     void Shutdown();

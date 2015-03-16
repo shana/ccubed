@@ -17,17 +17,20 @@
 void
 CCubedApp::Initialize(int argc, char* argv[])
 {
+    // SimpleApp implements application-level callbacks. It will create the first
+    // browser instance in OnContextInitialized() after CEF has initialized.
+    app = new CCubedCefApp();
+
     // Provide CEF with command-line arguments.
     CefMainArgs main_args(argc, argv);
     
-    // SimpleApp implements application-level callbacks. It will create the first
-    // browser instance in OnContextInitialized() after CEF has initialized.
 
     // Specify CEF global settings here.
     CefSettings settings;
     
+    
     // Initialize CEF for the browser process.
-    CefInitialize(main_args, settings, GetCef().get(), NULL);
+    CefInitialize(main_args, settings, app.get(), NULL);
     
     CefRegisterSchemeHandlerFactory("client", "ccubed", new ClientSchemeHandlerFactory());
 
@@ -51,12 +54,6 @@ CCubedApp::Initialize(int argc, char* argv[])
 bool
 CCubedApp::Run()
 {
-    std::string dll = File::GetExecDir() + "/Managed/test.dll";
-    MonoAssembly* assembly = mono_domain_assembly_open(mono_domain_get(), dll.c_str());
-    MonoImage* image = mono_assembly_get_image (assembly);
-    MonoClass* klass = mono_class_from_name (image, "Embed", "Test");
-    MonoObject* obj = mono_object_new (domain, klass);
-    mono_runtime_object_init (obj);
     
     
     // Run the CEF message loop. This will block until CefQuitMessageLoop() is
