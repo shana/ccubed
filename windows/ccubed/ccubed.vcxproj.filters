@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{8be0a8a4-4083-40e9-b59d-130e27f13d5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{05e3244c-c881-484e-bf29-fca35e29cbee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\JS">
+      <UniqueIdentifier>{570dcc7c-050d-4a3c-96cc-333c4be48de6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\JS">
+      <UniqueIdentifier>{0398374a-e762-4318-bcf2-f4b83f99224c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cef">
+      <UniqueIdentifier>{ca6c1a30-6b9b-424b-aa17-7b76e8cce973}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cef">
+      <UniqueIdentifier>{a00958ed-a6dd-4c10-9e7a-d52bf193b972}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\JS\JSBridge.h">
+      <Filter>Header Files\JS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Cef\CallbackHandler.h">
+      <Filter>Header Files\Cef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Cef\CCubedCefApp.h">
+      <Filter>Header Files\Cef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Utils\File.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Utils\UrlParser.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Cef\RequestHandler.h">
+      <Filter>Header Files\Cef</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Utils\File.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Utils\UrlParser.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Cef\CallbackHandler.cpp">
+      <Filter>Source Files\Cef</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Cef\CCubedCefApp.cpp">
+      <Filter>Source Files\Cef</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\JS\JSBridge.cpp">
+      <Filter>Source Files\JS</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Cef\RequestHandler.cpp">
+      <Filter>Source Files\Cef</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ccubed.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ccubed.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
