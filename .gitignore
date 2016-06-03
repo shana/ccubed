@@ -3,6 +3,7 @@
 *.ko
 *.obj
 *.elf
+obj/*
 
 # Precompiled Headers
 *.gch
@@ -19,6 +20,8 @@
 *.so
 *.so.*
 *.dylib
+*.pdb
+*.mdb
 
 # Executables
 *.exe
@@ -33,3 +36,4 @@ Build
 DerivedData
 xcuserdata
 *.xcuserstate
+*.suo

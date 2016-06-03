@@ -31,9 +31,18 @@
     <Filter Include="Header Files\Cef">
       <UniqueIdentifier>{a00958ed-a6dd-4c10-9e7a-d52bf193b972}</UniqueIdentifier>
     </Filter>
+    <Filter Include="js">
+      <UniqueIdentifier>{daeff3e9-7335-49f5-ab36-489e8fce0063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cs">
+      <UniqueIdentifier>{a9eaa0ff-d171-42f0-ad6d-25bb966fbfd6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+    <Text Include="..\..\tests\test.js">
+      <Filter>js</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -105,5 +114,10 @@
     <Image Include="ccubed.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\tests\test.cs">
+      <Filter>cs</Filter>
+    </None>
   </ItemGroup>
 </Project>

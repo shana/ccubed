@@ -5,7 +5,13 @@ namespace Embed {
 public class Test {
 	public Test()
 	{
-		Console.WriteLine("WOOT!");
+		
+	}
+
+	static int i;
+	public static int Get()
+	{
+		return ++i;
 	}
 }
 
